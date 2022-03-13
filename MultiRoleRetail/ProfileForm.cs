@@ -21,8 +21,20 @@ namespace MultiRoleRetail
         {
             lbName.Text = LoginForm.UserName;
             lbEmail.Text = LoginForm.UserEmail;
-            lbPhone.Text = LoginForm.UserPhone;
-            lbName.Text = LoginForm.UserRole;
+            lbPhone.Text = LoginForm.UserPhone.ToString();
+
+            if (LoginForm.UserRole == int.Parse("1"))
+            {
+                lbRole.Text = "Admin";
+            }
+            if (LoginForm.UserRole == int.Parse("2"))
+            {
+                lbRole.Text = "Executive";
+            }
+            if (LoginForm.UserRole == int.Parse("3"))
+            {
+                lbRole.Text = "User";
+            }
         }
     }
 }

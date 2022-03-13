@@ -36,6 +36,7 @@ namespace MultiRoleRetail
                 return;
             }
 
+            UserID = acccount.ColId;
             UserName = acccount.Name;
             UserEmail = acccount.Email;
             UserPhone = acccount.Phone;

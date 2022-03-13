@@ -49,3 +49,5 @@ D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRol
 D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRoleRetail.LoginForm.resources
 D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRoleRetail.MenuForm.resources
 D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRoleRetail.Properties.Resources.resources
+D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRoleRetail.ProfileForm.resources
+D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRoleRetail.ExportDataForm.resources
