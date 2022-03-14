@@ -21,6 +21,7 @@ namespace MultiRoleRetail
         {
             InitializeComponent();
             _db = new DatabaseRetail();
+            _mode = Mode.None;
         }
 
         private void Product_Load(object sender, EventArgs e)
@@ -28,7 +29,7 @@ namespace MultiRoleRetail
             groupBox1.Enabled = false;
             RefreshData();
 
-            cbSupplierID.DataSource = (from p in _db.Products select p.Name).ToList();
+            cbSupplierID.DataSource = (from s in _db.Suppliers select s.Name).ToList();
             cbSupplierID.SelectedItem = null;
         }
 
@@ -37,7 +38,7 @@ namespace MultiRoleRetail
             dgProduct.DataSource =
                 (
                 from pp in _db.Products
-                where pp.Name.Contains(tbName.Text) || pp.Supplier.Name.Contains(cbSupplierID.Text)
+                where pp.Name.Contains(tbSearch.Text) || pp.Supplier.Name.Contains(tbSearch.Text)
                 select new
                 {
                     pp.ColId,
@@ -47,12 +48,14 @@ namespace MultiRoleRetail
                     supplier = pp.Supplier.Name
                 }
                 ).ToList();
+
         }
 
         private void AddData()
         {
             var product = new Product
             {
+                ColId = tbID.Text,
                 Name = tbName.Text,
                 Price = int.Parse(tbPrice.Text),
                 Stock = int.Parse(tbStock.Text),
@@ -70,7 +73,7 @@ namespace MultiRoleRetail
             prod.Name = tbName.Text;
             prod.Price = int.Parse(tbPrice.Text);
             prod.Stock = int.Parse(tbStock.Text);
-            prod.Supplier.Name = cbSupplierID.Text;
+            prod.SupplierId = _db.Suppliers.First(s => s.Name == cbSupplierID.Text).ColId;
 
             _db.Products.Update(prod);
             _db.SaveChanges();
@@ -102,7 +105,7 @@ namespace MultiRoleRetail
             {
                 error += "select a supplier";
             }
-            else
+            if(error != String.Empty)
             {
                 MessageBox.Show(error, "Failed to add product", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -129,7 +132,70 @@ namespace MultiRoleRetail
             var id = _db.Products.OrderByDescending(p => p).FirstOrDefault()?.ColId[1..];
             tbID.Text = id == null ? "P001" : $"P{(int.Parse(id) + 1):D3}";
 
+            _mode = Mode.Add;
+        }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = true;
+            btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = false;
+
+            var id = tbID.Text = dgProduct.SelectedRows[0].Cells[0].Value.ToString();
+            var produh = _db.Products.Find(id);
+            produh.Supplier = _db.Suppliers.Find(produh.SupplierId);
+
+            tbName.Text = produh.Name;
+            tbPrice.Text = produh.Price.ToString();
+            tbStock.Text = produh.Stock.ToString();
+            cbSupplierID.SelectedItem = produh.Supplier.Name;
+
+            _mode = Mode.Edit;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            var id = dgProduct.SelectedRows[0].Cells[0].Value.ToString();
+            var pro = _db.Products.Find(id);
+
+            var confirmation = MessageBox.Show($"Are you sure want to delete {pro.Name} from database?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirmation == DialogResult.No)
+                return;
+
+            DeleteData(pro);
+            RefreshData();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (!Validation())
+            {
+                return;
+            }
+            if (_mode == Mode.Add)
+            {
+                AddData();
+            }
+            if (_mode == Mode.Edit)
+            {
+                EditData();
+            }
+            if (_mode == Mode.None)
+            {
+                return;
+            }
+
+            groupBox1.Enabled = false;
+            btnAdd.Enabled = btnDelete.Enabled = btnEdit.Enabled = true;
+
+            Clear();
+            RefreshData();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = false;
+            Clear();
         }
     }
 }
