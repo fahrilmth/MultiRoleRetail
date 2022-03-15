@@ -10,6 +10,7 @@ namespace MultiRoleRetail
         public static string UserEmail { get; private set; }
         public static int UserPhone { get; private set; }
         public static int UserRole { get; private set; }
+
         public LoginForm()
         {
             InitializeComponent();
