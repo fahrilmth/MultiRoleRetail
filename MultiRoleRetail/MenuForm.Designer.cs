@@ -75,28 +75,28 @@
             // pROFILEToolStripMenuItem
             // 
             this.pROFILEToolStripMenuItem.Name = "pROFILEToolStripMenuItem";
-            this.pROFILEToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.pROFILEToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
             this.pROFILEToolStripMenuItem.Text = "PROFILE";
             this.pROFILEToolStripMenuItem.Click += new System.EventHandler(this.pROFILEToolStripMenuItem_Click);
             // 
             // sIGNOUTToolStripMenuItem
             // 
             this.sIGNOUTToolStripMenuItem.Name = "sIGNOUTToolStripMenuItem";
-            this.sIGNOUTToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.sIGNOUTToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
             this.sIGNOUTToolStripMenuItem.Text = "SIGN OUT";
             this.sIGNOUTToolStripMenuItem.Click += new System.EventHandler(this.sIGNOUTToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
             // eXPORTDAYAToolStripMenuItem
             // 
             this.eXPORTDAYAToolStripMenuItem.Name = "eXPORTDAYAToolStripMenuItem";
-            this.eXPORTDAYAToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.eXPORTDAYAToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
             this.eXPORTDAYAToolStripMenuItem.Text = "EXPORT DATA";
             this.eXPORTDAYAToolStripMenuItem.Click += new System.EventHandler(this.eXPORTDAYAToolStripMenuItem_Click);
             // 
@@ -113,20 +113,23 @@
             // pRODUCTToolStripMenuItem1
             // 
             this.pRODUCTToolStripMenuItem1.Name = "pRODUCTToolStripMenuItem1";
-            this.pRODUCTToolStripMenuItem1.Size = new System.Drawing.Size(198, 34);
+            this.pRODUCTToolStripMenuItem1.Size = new System.Drawing.Size(194, 34);
             this.pRODUCTToolStripMenuItem1.Text = "PRODUCT";
+            this.pRODUCTToolStripMenuItem1.Click += new System.EventHandler(this.pRODUCTToolStripMenuItem1_Click);
             // 
             // eMPLOYEEToolStripMenuItem
             // 
             this.eMPLOYEEToolStripMenuItem.Name = "eMPLOYEEToolStripMenuItem";
-            this.eMPLOYEEToolStripMenuItem.Size = new System.Drawing.Size(198, 34);
-            this.eMPLOYEEToolStripMenuItem.Text = "EMPLOYEE";
+            this.eMPLOYEEToolStripMenuItem.Size = new System.Drawing.Size(194, 34);
+            this.eMPLOYEEToolStripMenuItem.Text = "USERS";
+            this.eMPLOYEEToolStripMenuItem.Click += new System.EventHandler(this.eMPLOYEEToolStripMenuItem_Click);
             // 
             // sUPPLIERToolStripMenuItem
             // 
             this.sUPPLIERToolStripMenuItem.Name = "sUPPLIERToolStripMenuItem";
-            this.sUPPLIERToolStripMenuItem.Size = new System.Drawing.Size(198, 34);
+            this.sUPPLIERToolStripMenuItem.Size = new System.Drawing.Size(194, 34);
             this.sUPPLIERToolStripMenuItem.Text = "SUPPLIER";
+            this.sUPPLIERToolStripMenuItem.Click += new System.EventHandler(this.sUPPLIERToolStripMenuItem_Click);
             // 
             // tRANSACTIONToolStripMenuItem
             // 
@@ -142,12 +145,14 @@
             this.nEWTRANSACTIONToolStripMenuItem.Name = "nEWTRANSACTIONToolStripMenuItem";
             this.nEWTRANSACTIONToolStripMenuItem.Size = new System.Drawing.Size(309, 34);
             this.nEWTRANSACTIONToolStripMenuItem.Text = "NEW TRANSACTION";
+            this.nEWTRANSACTIONToolStripMenuItem.Click += new System.EventHandler(this.nEWTRANSACTIONToolStripMenuItem_Click);
             // 
             // tRANSACTIONHISTORYToolStripMenuItem
             // 
             this.tRANSACTIONHISTORYToolStripMenuItem.Name = "tRANSACTIONHISTORYToolStripMenuItem";
             this.tRANSACTIONHISTORYToolStripMenuItem.Size = new System.Drawing.Size(309, 34);
             this.tRANSACTIONHISTORYToolStripMenuItem.Text = "TRANSACTION HISTORY";
+            this.tRANSACTIONHISTORYToolStripMenuItem.Click += new System.EventHandler(this.tRANSACTIONHISTORYToolStripMenuItem_Click);
             // 
             // rEPORTToolStripMenuItem
             // 
