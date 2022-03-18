@@ -5,6 +5,11 @@
       "ProjectGuid": "0138cf30-3f25-49d4-a57e-91cf0ec35c94",
       "DisplayName": "MultiRoleRetail",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1

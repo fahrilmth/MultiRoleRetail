@@ -89,8 +89,40 @@ namespace MultiRoleRetail
 
         private void tRANSACTIONHISTORYToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TransactionHistoryForm thf = new TransactionHistoryForm();
+            TransactionHistoryForm thf = new TransactionHistoryForm(_db);
             thf.Show();
+        }
+
+        private void dAILYREPORTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DailyReportForm d = new DailyReportForm();
+            d.Show();
+        }
+
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+            if (LoginForm.UserRole == int.Parse("2"))
+            {
+                IsExecutive();
+            }
+            if (LoginForm.UserRole == int.Parse("3"))
+            {
+                IsUser();
+            }
+        }
+
+        private void IsUser()
+        {
+            rEPORTToolStripMenuItem.Enabled = false;
+            pRODUCTToolStripMenuItem.Enabled = false;
+            tRANSACTIONHISTORYToolStripMenuItem.Enabled = false;
+            eXPORTDAYAToolStripMenuItem.Enabled = false;
+        }
+
+        private void IsExecutive()
+        {
+            rEPORTToolStripMenuItem.Enabled = false;
+            tRANSACTIONHISTORYToolStripMenuItem.Enabled = false;
         }
     }
 }

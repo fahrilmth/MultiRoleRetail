@@ -51,3 +51,11 @@ D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRol
 D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRoleRetail.Properties.Resources.resources
 D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRoleRetail.ProfileForm.resources
 D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRoleRetail.ExportDataForm.resources
+D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRoleRetail.ProductForm.resources
+D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRoleRetail.UserForm.resources
+D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRoleRetail.SupplierForm.resources
+D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRoleRetail.BrowseProductForm.resources
+D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRoleRetail.NewTransactionForm.resources
+D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRoleRetail.TransactionDetailForm.resources
+D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRoleRetail.TransactionHistoryForm.resources
+D:\MyVSProgram\MultiRoleRetail\MultiRoleRetail\obj\Debug\net6.0-windows\MultiRoleRetail.DailyReportForm.resources

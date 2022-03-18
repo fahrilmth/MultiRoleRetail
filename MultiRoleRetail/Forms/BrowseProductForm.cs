@@ -14,10 +14,14 @@ namespace MultiRoleRetail
     public partial class BrowseProductForm : Form
     {
         private readonly DatabaseRetail _db;
-        public BrowseProductForm()
+        private readonly Dictionary<string, TransactionHelper> _transaction;
+        public Action<string, int> selectProduct { private get; set; }
+        
+        public BrowseProductForm(DatabaseRetail db, Dictionary<string, TransactionHelper> t)
         {
             InitializeComponent();
-            _db = new DatabaseRetail();
+            _db = db;
+            _transaction = t;
         }
 
         private void BrowseProductForm_Load(object sender, EventArgs e)
@@ -32,20 +36,25 @@ namespace MultiRoleRetail
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
+            var id = dgvTransaction.SelectedRows[0].Cells[0].Value.ToString();
+            var stock = (int)dgvTransaction.SelectedRows[0].Cells[3].Value;
 
+            selectProduct(id, stock);
+            Close();
         }
 
         private void LoadData()
         {
             dgvTransaction.DataSource =
                 (
-                from t in _db.Transactions
-                where t.User.Name.Contains(tbSearch.Text)
+                from p in _db.Products
+                where p.Name.Contains(tbSearch.Text)
                 select new
                 {
-                    t.ColId,
-                    t.Date,
-                    user = t.User.Name
+                    p.ColId,
+                    p.Name,
+                    p.Price,
+                    stock = p.Stock - (_transaction.ContainsKey(p.ColId) ? _transaction[p.ColId].Qty : 0)
                 }
                 ).ToList();
         }

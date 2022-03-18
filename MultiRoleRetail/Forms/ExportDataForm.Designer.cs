@@ -115,6 +115,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "ExportDataForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ExportDataForm";
             this.Load += new System.EventHandler(this.ExportDataForm_Load);
             this.ResumeLayout(false);

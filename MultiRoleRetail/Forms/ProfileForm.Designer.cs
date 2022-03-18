@@ -124,6 +124,7 @@
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.label1);
             this.Name = "ProfileForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProfileForm";
             this.Load += new System.EventHandler(this.ProfileForm_Load);
             this.ResumeLayout(false);

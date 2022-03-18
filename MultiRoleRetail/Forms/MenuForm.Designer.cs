@@ -168,6 +168,7 @@
             this.dAILYREPORTToolStripMenuItem.Name = "dAILYREPORTToolStripMenuItem";
             this.dAILYREPORTToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
             this.dAILYREPORTToolStripMenuItem.Text = "DAILY REPORT";
+            this.dAILYREPORTToolStripMenuItem.Click += new System.EventHandler(this.dAILYREPORTToolStripMenuItem_Click);
             // 
             // mONTHLYREPORTToolStripMenuItem
             // 
@@ -183,7 +184,9 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuForm";
+            this.Load += new System.EventHandler(this.MenuForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

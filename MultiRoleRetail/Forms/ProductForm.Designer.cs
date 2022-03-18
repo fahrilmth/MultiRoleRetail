@@ -47,12 +47,18 @@
             // 
             // dgProduct
             // 
-            this.dgProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgProduct.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProduct.Location = new System.Drawing.Point(12, 48);
+            this.dgProduct.MultiSelect = false;
             this.dgProduct.Name = "dgProduct";
             this.dgProduct.RowHeadersWidth = 62;
             this.dgProduct.RowTemplate.Height = 33;
+            this.dgProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgProduct.Size = new System.Drawing.Size(985, 495);
             this.dgProduct.TabIndex = 0;
             // 
@@ -68,7 +74,8 @@
             // 
             // tbSearch
             // 
-            this.tbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbSearch.Location = new System.Drawing.Point(12, 12);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.PlaceholderText = "  Search here";
@@ -101,6 +108,7 @@
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -110,6 +118,7 @@
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // cbSupplierID
             // 
@@ -161,6 +170,7 @@
             this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "EDIT";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -170,6 +180,7 @@
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // ProductForm
             // 
@@ -183,6 +194,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgProduct);
             this.Name = "ProductForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product";
             this.Load += new System.EventHandler(this.Product_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgProduct)).EndInit();
